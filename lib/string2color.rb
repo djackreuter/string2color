@@ -19,10 +19,16 @@ module String2color
     end
 
     def second_val(string)
-        
+      @val_2 = string[3].ord
+    end
+
+    def third_val(string)
+      @val_3 = string[/./].ord
     end
   end
 end
 
 test = String2color::Color.new
-puts test.first_val('test')
+puts test.first_val('foobar')
+puts test.second_val('foobar')
+puts test.third_val('foobar')
