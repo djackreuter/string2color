@@ -2,8 +2,7 @@ require_relative 'string2color/version'
 # change string to color
 module String2color
   # Class for color
-  class Color < String
-    attr_accessor :val_1, :val_2, :val_3
+  class String
 
     def store_string(str)
       string = str
@@ -13,7 +12,7 @@ module String2color
       @val_1 = string.size
       if @val_1 <= 10
         @val_1 * 9
-      elsif @val_1 > 10 && @val_1 < 90
+      elsif @val_1 > 10 && @val_1 <= 90
         @val_1 * 2
       end
     end
@@ -25,6 +24,13 @@ module String2color
     def third_val(string)
       @val_3 = string[/./].ord
     end
+
+    def to_color
+      "RGB(#{self.val_1}, #{val_2}, #{val_3})"
+    end
+    def val_1
+      self.
+    end
   end
 end
 
@@ -32,3 +38,5 @@ test = String2color::Color.new
 puts test.first_val('foobar')
 puts test.second_val('foobar')
 puts test.third_val('foobar')
+
+puts test.output
