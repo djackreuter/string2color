@@ -23,5 +23,3 @@ class String
     self[/./].ord
   end
 end
-
-puts 'foobar'.to_color
