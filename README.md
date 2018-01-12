@@ -1,6 +1,6 @@
 # String2color
 
-The String2color gem takes extends the Ruby String class and turns a string into a random RGB color. 
+The String2color gem takes extends the Ruby String class and turns a string into a random RGB color.  Since RGB has three values, naturally the string must be three characters or longer to work.
 
 ## Installation
 
